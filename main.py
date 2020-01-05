@@ -6,6 +6,7 @@ PASSWORD = os.environ['password']
 POGO_KEY = os.environ['pogo']
 WEB = 'https://pogotrainer.club/'
 
+
 def log(msg):
     print(msg)
 
