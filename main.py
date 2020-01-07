@@ -5,6 +5,8 @@ EMAIL = os.environ['email']
 PASSWORD = os.environ['password']
 POGO_KEY = os.environ['pogo']
 WEB = 'https://pogotrainer.club/'
+ACCOUNT = 'https://pogotrainer.club/account/'
+HEADLESS = True
 
 
 def log(msg):
@@ -19,7 +21,7 @@ def send_text(element, text: str) -> None:
 
 profile = webdriver.FirefoxProfile()
 options = webdriver.FirefoxOptions()
-options.headless = False
+options.headless = HEADLESS
 
 profile.set_preference('geo.prompt.testing', True)
 profile.set_preference('geo.prompt.testing.allow', True)
@@ -46,7 +48,7 @@ elem.click()
 
 log('Sucess')
 log('Going to account settings')
-driver.get('https://pogotrainer.club/account/')
+driver.get(ACCOUNT)
 
 log(f'Updating code {POGO_KEY}')
 elem = driver.find_element_by_xpath('//a[contains(@class, "btn btn-sm btn-primary")]')
@@ -63,3 +65,5 @@ elem.send_keys(POGO_KEY)
 elem = driver.find_element_by_xpath('//input[contains(@class, "btn btn-primary")]')
 elem.click()
 log('Success, closing now')
+
+driver.close()
