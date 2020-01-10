@@ -51,7 +51,7 @@ def main():
                            'data:application/json,{"location": {"lat": 40.7590, "lng": -73.9845}, "accuracy": 100.0}')
 
     log(f'Joining {WEB}')
-    driver = webdriver.Firefox(firefox_profile=profile, options=options)
+    driver = webdriver.Firefox(firefox_profile=profile, options=options, executable_path='./geckodriver.exe')
     driver.get(WEB)
 
     elem = driver.find_element_by_id('loginDropDown')
