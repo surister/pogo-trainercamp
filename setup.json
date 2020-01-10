@@ -1,0 +1,13 @@
+{
+  "email": "fakeemail@gmail.com",
+  "password": "fakepassword",
+  "pogo_key": "0000 0000 0000",
+  "headless": false,
+  "cooldown": 300,
+  "total_time": 0,
+  "_comment": "'headless' can either be true or false (default), ",
+  "_comment2": "Respect the spaces between numbers in 'pogo_key'   2334 9834 3723 is valid, 233498343723 IS NOT ",
+  "_comment3": "Cooldown is the time between execution, I recommend 300 seconds (default, 5 minutes) not less than 1 minute",
+  "_comment4": "Total time is for how long the script will run, 0 is forever or until you close the script, time is in secconds.",
+  "_comment5": "Only 'email', 'password', 'pogo_key', 'headless', 'cooldown', 'total_time' should be modified by user"
+}
